@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dealer Website</title>
+    <link rel="stylesheet" href="car dealer.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AutoWorld</h1>
+            <nav>
+                    <a href="#">Home</a>
+                    <a href="#">Inventory</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>                
+            </nav>
+        </div>
+    </header>    
+    <section class="filter-section">
+        <div class="container">
+            <input type="text" id="searchBar" placeholder="Search for cars...">
+            <select id="filterMake">
+                <option value="">Filter by Make</option>
+                <option value="Lamborghini">Lamborghini</option>
+                <option value="Ferrari">Ferrari</option>
+                <option value="Mclaren">Mclaren</option>
+                <option value="Bugatti">Bugatti</option>
+                <option value="Pagani">Pagani</option>
+                <option value="Ford">Ford</option>
+                <option value="Porsche">Porsche</option>
+            </select>
+        </div>
+    </section>
+    <main>
+        <div class="container">
+            <h2>Our Inventory</h2>
+            <div id="car-listings" class="car-listings">
+                <div class="car-item" data-make="Lamborghini" data-model="Huracan">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV_hUNJ5FuVoGDnRf2oMlWbv7exBlaysduTA&s" alt="Car 1">
+                    <h3>Lamborghini Huracan</h3>
+                    <p>2015 | $350,000 | Super</p>
+                    <button onclick="showDetails('Lamborghini Huracan', '2015', '$350,000', 'Supercar')">View Details</button>
+                </div>
+                <div class="car-item" data-make="Lamborghini" data-model="Aventador">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/2023_Lamborghini_Aventador_Ultimae.jpg/1200px-2023_Lamborghini_Aventador_Ultimae.jpg" height="180" width="300">
+                    <h3>Lamborghini Aventador Roadster</h3>
+                    <p>2017 | $500,000 | Super</p>
+                    <button onclick="showDetails('Lamborghini Aventador Roadster', '2017', '$500,00', 'Supercar')">View Details</button>
+                </div>
+                <div class="car-item" data-make="Lamborghini" data-model="Revuelto">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Lamborghini_Revuelto_%28cropped%29.jpg/800px-Lamborghini_Revuelto_%28cropped%29.jpg" height="180" width="400">
+                    <h3>Lamborghini Revuelto</h3>
+                    <p>2024 | $900,000 | Super</p>
+                    <button onclick="showDetails('Lamborghini Revuelto', '2024', '$900,000', 'Supercar')">View Details</button>
+                </div>
+                <div class="car-item" data-make="Mclaren" data-model="720s">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRWQeJvO4NblJZFF5l4CfTbmROBXSqJ9cvXw&s" height="200" width="390">
+                    <h3>Mclaren 720s</h3>
+                    <p>2017 | $400,000 | Super</p>
+                    <button onclick="showDetails('Mclaren 720s', '2017', '$400,000', 'Supercar')">View Details</button>
+                </div>
+                <div class="car-item" data-make="Ferrari" data-model="488 Pista">
+                    <img src="https://cdn.ferrari.com/cms/network/media/img/resize/5d371735c3f9ec0af647572d-ferrari_488pista_intro_socialshare?width=1080" height="200" width="400">
+                    <h3>Ferrari 488 Pista</h3>
+                    <p>2017 | $400,000 | Super</p>
+                    <button onclick="showDetails('Ferrari 488 Pista', '2017', '$400,000', 'Supercar')">View Details</button>
+                </div>
+                <div class="car-item" data-make="Mclaren" data-model="Senna">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnYrlc8qTzAWVw0-Y-A1bPuy2XHLzPPdxmBg&s" height="300" width="400">
+                    <h3>Mclaren Senna</h3>
+                    <p>2019 | $1.5M | Hyper</p>
+                    <button onclick="showDetails('Mclaren Senna', '2019', '$1.5M', 'Hypercar')">View Details</button>
+                </div>
+                <div class="car-item" data-make="Bugatti" data-model="Veryon">
+                    <img src="https://www.bugatti.com/media/o3hfqiv1/veyron-grand-sport-vitesse-grid.png" height="300" width="350">
+                    <h3>Bugatti Veryon</h3>
+                    <p>2010 | $1.5M | Hyper</p>
+                    <button onclick="showDetails('Bugatti Veryon', '2010', '$1.5M', 'Hypercar')">View Details</button>
+                </div>
+                <div class="car-item" data-make="Pagani" data-model="Huayra">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/888/921/177/pagani-huayra-supercar-huayra-black-car-wallpaper-preview.jpg" height="300" width="545">
+                    <h3>Bugatti Veryon</h3>
+                    <p>2015 | $2M | Hyper</p>
+                    <button onclick="showDetails('Pagani Huayra', '2015', '$2M', 'Hypercar')">View Details</button>
+                </div>
+                <div class="car-item" data-make="Ford" data-model="Shelby GT500">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/898/923/696/machine-mustang-ford-shelby-wallpaper-thumb.jpg" height="300" width="400">
+                    <h3>Ford Shelby GT500</h3>
+                    <p>1969 | $150,000 | Muscle</p>
+                    <button onclick="showDetails('Ford Shelby GT500', '1969', '$150,000', 'Musclecar')">View Details</button>
+                </div>
+                <div class="car-item" data-make="Porsche" data-model="918 Spyder">
+                    <img src="https://i.pinimg.com/originals/ad/e1/d2/ade1d25a2e9220205365e52113f7950f.jpg" height="300" width="450">
+                    <h3>Porsche 918 Spyder</h3>
+                    <p>2015 | $2.5M | Hyper</p>
+                    <button onclick="showDetails('Porsche 918 Spyder', '2015', '$2.5M', 'Hypercar')">View Details</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="carModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalYear"></p>
+            <p id="modalPrice"></p>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <form action="#">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AutoWorld. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
